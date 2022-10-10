@@ -3,6 +3,7 @@ package spring_introduction.spring_introduction2022;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import spring_introduction.spring_introduction2022.aop.TimeTraceAop;
 import spring_introduction.spring_introduction2022.repository.JpaMemberRepository;
 import spring_introduction.spring_introduction2022.repository.MemberRepository;
 import spring_introduction.spring_introduction2022.service.MemberService;
@@ -57,6 +58,13 @@ public class SpringConfig {
         //return new JdbcMemberRepository(dataSource);
         //return new JdbcTemplateMemberRepository(dataSource);
         return new JpaMemberRepository(em);
+    }
+    */
+
+    /*
+    @Bean
+    public TimeTraceAop timeTraceAop() {
+        return new TimeTraceAop();
     }
     */
 }
